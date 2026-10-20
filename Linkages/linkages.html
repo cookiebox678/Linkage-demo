@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Linkage demos</title>
+	<link rel="stylesheet" href="styling.css">
+	<link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header-container">
+			<a class="main-link" href="../Reminder/reminder.html">Main site</a>
+		</div>
+	</header>
+
+	<div class="content">
+		<h1>Peaucellier-Lipkin Linkage</h1>
+
+
+		<div class="canvas-container">
+			<canvas class="normal-PL shared"></canvas>
+		</div>
+		<p>
+			The context surrounding the invention of the Peaucellier-Lipkin linkage was that of the steam engine during the industrial revolution.
+			Almost a hundred years prior, in 1784, James Watt had patented the Watt linkage (site to be added), a four-bar linkage which approximates a straight line, as part of his larger patent for the Watt steam engine.
+			After its huge economic success, the interest in mechanical linkages spiked, and a conjecture appeared (citation needed):
+			A mechanical linkage consisting exclusively of bars spinning around revolute joints could never achieve an exact linear motion, only better and better approximations thereof.
+			The first linkage to disprove this conjecture was the Sarrus linkage (site to be added), which is a nonplanar six-bar linkage.
+			In 1864, the Peaucellier-Lipkin linkage (PL for short), named after CHarles-Nicolas Peaucellier and Yom Tov Lipman, became the first planar counterexample.
+		</p>
+
+		<p>
+			The version displayed at top of the page is the original shape as it was first written down (citation needed), but there is an entire family of related linkages with different benefits and drawbacks.
+			They all draw a perfect straight line, but they differ in the length of the line, the position it is drawn at and the mechanical strength of the linkage while it draws.
+			The other end of the family, sometimes referred to as the "inverse" or "inverted" Peaucellier-Lipkin linakge, is shown below.
+		</p>
+
+		<div class="canvas-container">
+			<canvas class="inverse-PL shared"></canvas>
+		</div>
+
+		<p>
+			The coloration is chosen to imply which links in one correspond to which links in the other.
+			In the example below, the left linkage can be moved by dragging around its vertices.
+			Dragging on the vertices of the right linkage shows the stresses that would be induced if the joint were moving in that direction, which gives an indication for the positions in which the linkages are directionally strongest: Where a small movement yields high stress, the linkage is strongest.
+			Where a large movement yields low stress, the linkage is weakest.
+		</p>
+
+		<div class="canvas-container" style="--canvas-height: 600px; --canvas-width: 100%">
+			<canvas class="general-PL shared"></canvas>
+		</div>
+
+		<p>There is a closely related linear linkage called Hart's linkage, which also achieves perfect linear motion with only six links instead of eight.</p>
+
+		<div class="canvas-container" style="--canvas-height: 600px">
+			<canvas class="general-hart shared"></canvas>
+		</div>
+	</div>
+
+</body>
+
+  <script type="module" src="normal-PL.js"></script>
+	<script type="module" src="inverse-PL.js"></script>
+	<script type="module" src="general-PL.js"></script>
+	<script type="module" src="hart.js"></script>
+	<script type="module" src="html-utils.js"></script>
+	
+	<!--
+		<script type="module" src="linkage-utils.js"></script>
+		<script type="module" src="low-level-utils.js"></script>
+	-->
+
+	<!--
+	<script type="importmap">
+	{
+			"imports": {
+					"ml-matrix": "./node_modules/ml-matrix/matrix.umd.js"
+			}
+	}
+	</script>
+	-->
+
+</html>
